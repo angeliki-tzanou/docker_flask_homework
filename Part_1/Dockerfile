@@ -10,3 +10,6 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 # Ensure the app can run container starts running
 CMD ["python", "app.py"]
+
+# Docker build command: docker build -t app .
+# Docker run command: docker run -d -p 5001:5000 app
