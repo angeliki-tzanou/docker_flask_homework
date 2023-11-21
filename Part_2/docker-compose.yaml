@@ -1,4 +1,6 @@
-version: '3' ##version 3 syntax not the main version of docker##
+# Docker compose version
+version: '3'
+# Type of services that are created: The flask apps created the folder they are placed in under build and the ports that we have exposed them to
 services:
   flask_app_1:
     build: ./flask1
