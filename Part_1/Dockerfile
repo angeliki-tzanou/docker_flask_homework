@@ -12,7 +12,7 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 
 # Docker build command: docker build -t app .
-# Docker run command: docker run -d -p 8005:5001 app
+# Docker run command: docker run -d -p 8005:5000 app
 
 
 
@@ -24,7 +24,7 @@ CMD ["python", "app.py"]
 # We can run docker images so we can see the docker image we just built with the name of the app
 # After it pops up on the table then we use docker run -p port:port to expose it and run it in the port we would like to
 # Then if we run docker -d -p port:port __name_of_flask__ which would give output to the ID of the container the app is running within
-# Docker ps is a list of all the docker containers we have running
+# Docker ps is a list of all the docker containers we have running and their container IDs
 # To stop the container from running then you run docker stop ___ID of container running__ and it will stop the docker app from running
 # To rerun again you run docker run -d -p port:port __name of app__
 
