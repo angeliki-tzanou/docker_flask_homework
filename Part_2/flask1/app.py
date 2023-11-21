@@ -13,8 +13,7 @@ quotes = [
 @app.route('/')
 def random_quote():
     quote = random.choice(quotes)
-    # Add an HTML header with an h1 element
     return f"<h1>Welcome to the first example Flask App #1!</h1><p>Random Quote: {quote}</p>"
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5005)
+    app.run(debug=True, host='0.0.0.0')

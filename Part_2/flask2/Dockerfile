@@ -1,6 +1,6 @@
 FROM python:3.10-slim-buster
-WORKDIR /app/flask2
+WORKDIR /app
 COPY . /app/
 RUN pip install -r requirements.txt
-EXPOSE 8008
+EXPOSE 5000
 CMD ["python", "app.py"]

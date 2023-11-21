@@ -1,13 +1,13 @@
 # Using Python as a parent image
 FROM python:3.10-slim-buster
 # Working directory to my app in app.py
-WORKDIR /app/flask1
+WORKDIR /app
 # Copy the contents from the current directory (ex. contents from app.py, Dockerfile, requirements.txt) into the app container
 COPY . /app/
 # Ensure that needed packages in the requirements.txt file are being installed in this case "flask"
 RUN pip install -r requirements.txt
 # Specify the port 5000 being used and can be accessed
-EXPOSE 5005
+EXPOSE 5000
 # Ensure the app can run container starts running
 CMD ["python", "app.py"]
 
