@@ -2,9 +2,9 @@
 FROM python:3.10-slim-buster
 # Working directory to my app in app.py
 WORKDIR /app
-# Copy the contents from the current directory into the app container
+# Copy the contents from the current directory (ex. contents from app.py, Dockerfile, requirements.txt) into the app container
 COPY . /app/
-# Ensure that needed packages in the requirements.txt file are being installed
+# Ensure that needed packages in the requirements.txt file are being installed in this case "flask"
 RUN pip install -r requirements.txt
 # Specify the port 5000 being used and can be accessed
 EXPOSE 5000
@@ -12,4 +12,16 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 
 # Docker build command: docker build -t app .
-# Docker run command: docker run -d -p 5001:5000 app
+# Docker run command: docker run -d -p 8005:5000 app
+
+
+
+# Description of commands:
+# First we ensure the app runs locally
+# Then we run docker build -t __name_of_app__ .
+# This will build the docker image and run all the requirements in the txt file
+# After the 10 sec that the command has ran successfully and installed and ran all necessary packages
+# We can run docker images so we can see the docker image we just built with the name of the app
+# After it pops up on the table then we use docker run -p port:port to expose it and run it in the port we would like to
+# Then if we run docker -d -p port:port __name_of_flask__ which would give output to the ID of the container the app is running within
+#
