@@ -16,7 +16,7 @@ CMD ["python", "app.py"]
 
 
 
-# Description of Part 1 commands:
+##### Description of Part 1 commands: ######
 # First we ensure the app runs locally
 # Then we run docker build -t __name_of_app__ .
 # This will build the docker image and run all the requirements in the txt file
